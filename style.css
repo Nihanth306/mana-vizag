@@ -1,0 +1,291 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  color: #333;
+  overflow-x: hidden;
+}
+
+/*------------------------Scroll Bar-----------------------*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/*========================Nav Bar=========================*/
+.nav-bar {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  height: 70px;
+  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 30px;
+  color: #fff;
+  font-family: 'Satisfy', cursive;
+  animation: fadeIn 2s ease-in-out;
+}
+
+ul.menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  margin-left: 20px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+.menu li a:hover {
+  color: #ffeb3b;
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+/*=============================Banner=============================*/
+.banner {
+  background: url('https://i.pinimg.com/736x/59/37/6c/59376c53c20d31d62ce3d061b7ca34f3.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  animation: slideIn 2s ease-in-out;
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.banner-text-item {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+  animation: zoomIn 2s ease-in-out;
+}
+
+.banner-heading h1 {
+  font-size: 4rem;
+  font-family: 'Satisfy', cursive;
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+  backdrop-filter: blur(10px);
+}
+
+.form input {
+  padding: 10px;
+  margin-right: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.form input:hover, .form input:focus {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/*===========================Places===========================*/
+.places {
+  padding: 50px 0;
+  background: linear-gradient(90deg, #e0eafc, #cfdef3);
+  text-align: center;
+}
+
+.places-text h2 {
+  font-size: 3rem;
+  font-family: 'Barlow Condensed', sans-serif;
+  margin-bottom: 30px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: fadeInUp 1s ease-in-out;
+  max-width: 300px;
+}
+
+.card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.zoom-img {
+  overflow: hidden;
+  border-bottom: 2px solid #ff7e5f;
+}
+
+.zoom-img img {
+  width: 100%;
+  transition: transform 0.3s;
+}
+
+.card:hover .zoom-img img {
+  transform: scale(1.1);
+}
+
+.text {
+  padding: 20px;
+}
+
+.rating {
+  color: #ffeb3b;
+}
+
+.card h2 {
+  font-size: 1.8rem;
+  font-family: 'Barlow Condensed', sans-serif;
+  margin: 10px 0;
+}
+
+.card-box {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  color: #757575;
+}
+
+.location {
+  color: #ff7e5f;
+}
+
+/*=========================Animations=========================*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/*=========================Responsive Design=========================*/
+@media (max-width: 768px) {
+  .nav-bar {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu li {
+    margin: 10px 0;
+  }
+
+  .banner-heading h1 {
+    font-size: 3rem;
+  }
+
+  .form input {
+    width: 80%;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
