@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist Places</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+        /* Reset some default styles */
+        body, h1, h2, p, ul, li {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* General Body Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f4f4f4;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(90deg, #ff7e5f, #feb47b);
+            color: #fff;
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            text-align: center;
+            margin-bottom: 0.5rem;
+            font-family: 'Satisfy', cursive;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffeb3b;
+            text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Section Styles */
+        .place {
+            background: #fff;
+            padding: 2rem 0;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .place:nth-child(even) .container {
+            flex-direction: row-reverse;
+        }
+
+        .container {
+            display: flex;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .place-image {
+            flex: 1;
+            max-width: 40%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .place-image:hover {
+            transform: scale(1.05);
+        }
+
+        .place-content {
+            flex: 1;
+            margin: 1rem;
+            padding: 1rem;
+        }
+
+        .place h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 1rem;
+            font-family: 'Barlow Condensed', sans-serif;
+        }
+
+        .place p {
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .place-image {
+                max-width: 100%;
+                margin-bottom: 1rem;
+            }
+
+            .place-content {
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Explore the Vizag's Best Tourist Places</h1>
+            <nav>
+                <ul>
+                    <li><a href="MANA VIZAG.html">home</a></li>
+                    <li><a href="#Rama krishna beach">Rama krishna beach</a></li>
+                    <li><a href="#Rushikonda beach">Rushikonda beach</a></li>
+                    <li><a href="#Indira gandhi zoo park">Indira gandhi zoo park</a></li>
+                    <li><a href="#Ross hill church">Ross hill church</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="Rama krishna beach" class="place">
+        <div class="container">
+            <img src="https://th.bing.com/th/id/OIP.KIXOdAFyHYjeHjEfTC3RuAHaD7?rs=1&pid=ImgDetMain" alt="RK-Beach" class="place-image">
+            <div class="place-content">
+                <h2>Rama krishna beach</h2>
+                <p>Rama Krishna Beach in Vizag is a popular coastal destination known for its picturesque shoreline and vibrant atmosphere. Visitors can enjoy stunning sunsets, leisurely strolls along the sandy beach, and the local street food. The beach also features attractions like the beautifully sculpted Visakha Museum and a lively promenade.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="Rushikonda beach" class="place">
+        <div class="container">
+            <img src="https://vizagtourism.org.in/images/tourist-places/rishikonda-beach-vizag/rishikonda-beach-vizag-tourism-location-address.jpg" alt="Rusikondha beach" class="place-image">
+            <div class="place-content">
+                <h2>Rushikonda beach</h2>
+                <p>Rushikonda Beach is a serene escape with golden sands and clear waters, perfect for swimming and sunbathing. Its scenic beauty and tranquil environment make it a favorite for relaxing and enjoying water sports. The beach is also known for its picturesque sunsets and clean surroundings.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="Indira gandhi zoo park" class="place">
+        <div class="container">
+            <img src="https://th.bing.com/th/id/OIP.ao-F3UIVY9IsrPx0OwRFnAHaFj?rs=1&pid=ImgDetMain" alt="Indira gandhi zoo park" class="place-image">
+            <div class="place-content">
+                <h2>Indira gandhi zoo park</h2>
+                <p>Indira Gandhi Zoo Park is a sprawling sanctuary home to a diverse range of animals and birds. It offers well-maintained habitats, educational exhibits, and lush greenery, making it a great spot for family outings and wildlife enthusiasts. The park’s natural setting provides a refreshing retreat from the city.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="Ross hill church" class="place">
+        <div class="container">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzpdKaTis43cMwUIy5Ui1AnnncZ3sW6PvH4o1ZSuM3qXA6ZRYIfTw-FtWA_xvqEriQXAQ&usqp=CAU">
+            <div class="place-content">
+                <h2>Ross hill church</h2>
+                <p>Ross Hill Church, perched on a scenic hilltop, offers stunning panoramic views of Vizag. This historic church, known for its serene ambiance and beautiful architecture, is a peaceful place for reflection and prayer. The site is also renowned for its charming colonial-era design and tranquil surroundings.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
